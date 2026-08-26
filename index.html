@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neya</title>
+    <!-- Importation d'une police moderne -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0b0b0b; /* Fond noir sombre */
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        /* Style pour le texte Neya avec dégradé animé */
+        .neya-title {
+            font-size: 5rem;
+            font-weight: 900;
+            letter-spacing: -2px;
+            background: linear-gradient(270deg, #ffffff, #8b5cf6, #3b82f6, #ec4899, #ffffff);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            animation: gradientAnimation 6s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Style pour le sous-titre */
+        .subtitle {
+            font-size: 1.1rem;
+            color: #888888;
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+
+        /* Style pour la boîte du loader cliquable */
+        .loader-box {
+            display: inline-block;
+            background-color: #161616;
+            border: 1px solid #262626;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .loader-box:hover {
+            border-color: #8b5cf6;
+            background-color: #1f1f1f;
+        }
+
+        .loader-box code {
+            color: #a78bfa;
+            font-family: monospace;
+            font-size: 0.95rem;
+        }
+
+        /* Message "Copié !" */
+        #copy-notification {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: #10b981;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Titre principal -->
+        <h1 class="neya-title">Neya</h1>
+        <!-- Sous-titre -->
+        <p class="subtitle">Tu fais quoi ici ?</p>
+        
+        <!-- Ligne cliquable pour copier le script -->
+        <div class="loader-box" onclick="copyScript()">
+            <code>loadstring(game:HttpGet("https://neyaa.vercel.com/loader.lua"))()</code>
+        </div>
+        <div id="copy-notification">Copié dans le presse-papier !</div>
+    </div>
+
+    <script>
+        function copyScript() {
+            const scriptText = 'loadstring(game:HttpGet("https://neyaa.vercel.com/loader.lua"))()';
+            navigator.clipboard.writeText(scriptText).then(() => {
+                const notification = document.getElementById('copy-notification');
+                notification.style.opacity = '1';
+                setTimeout(() => {
+                    notification.style.opacity = '0';
+                }, 2000);
+            });
+        }
+    </script>
+
+</body>
+</html>
