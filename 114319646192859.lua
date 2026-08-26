@@ -5,7 +5,7 @@ local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 
 -- Création de ta fenêtre personnalisée avec le style Windows, le logo et les boutons intégrés
-local Window = Neya.CreateWindow("+1 DRAIN WATER")
+local Window = Neya.CreateWindow("Spin For Free")
 
 -- =============================================
 -- SCRIPT 1 : INSTANT CLAIM SPIN (Converti en Toggle Neya)
