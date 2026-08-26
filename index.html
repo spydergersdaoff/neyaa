@@ -98,14 +98,14 @@
         
         <!-- Ligne cliquable pour copier le script -->
         <div class="loader-box" onclick="copyScript()">
-            <code>loadstring(game:HttpGet("https://neyaa.vercel.com/loader.lua"))()</code>
+            <code>loadstring(game:HttpGet("https://neyaa.vercel.app/loader.lua"))()</code>
         </div>
         <div id="copy-notification">Copié dans le presse-papier !</div>
     </div>
 
     <script>
         function copyScript() {
-            const scriptText = 'loadstring(game:HttpGet("https://neyaa.vercel.com/loader.lua"))()';
+            const scriptText = 'loadstring(game:HttpGet("https://neyaa.vercel.app/loader.lua"))()';
             navigator.clipboard.writeText(scriptText).then(() => {
                 const notification = document.getElementById('copy-notification');
                 notification.style.opacity = '1';
