@@ -3,7 +3,7 @@ local PlaceId = game.PlaceId
 local idsJeux = {
     [76460552000865] = 'loadstring(game:HttpGet("https://pastefy.app/KTjnzyRB/raw"))()',
     [142823291] = 'loadstring(game:HttpGet("https://raw.smokingscripts.org/vertex.lua"))()',
-    [17625359962] = 'loadstring(game:HttpGet("https://pastefy.app/aDFL3Rjj/raw"))()',
+    [17625359962] = 'loadstring(game:HttpGet("https://pastefy.app/eM7R6V8O/raw"))()',
 }
 
 -- Script de secours si aucun ID ne correspond
