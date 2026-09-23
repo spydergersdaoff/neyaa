@@ -208,7 +208,7 @@ PlayBtn.MouseButton1Click:Connect(function()
     -- 1. Exécute ton loader distant (qui contient ton interface externe ou tes scripts)
     task.spawn(function()
         local success, err = pcall(function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/spydergersdaoff/neyaa/refs/heads/main/loader.lua"))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/spydergersdaoff/neyaa/refs/heads/main/Place.lua"))()
         end)
         if not success then
             warn("[Neya Loader] Erreur : " .. tostring(err))
